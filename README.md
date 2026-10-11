@@ -1,4 +1,4 @@
-<img width="4422" height="1870" alt="method" src="https://github.com/user-attachments/assets/6f7e9481-0efb-4b09-8bfc-bfd3f912efbe" /># SGMoE for medical reports
+# SGMoE for medical reports
 
 **Semantics-Guided Mixture of Experts for Multi-class Disease Classification Based on Radiology Reports**
 
