@@ -1,4 +1,4 @@
-# SGMoE
+# SGMoE for medical reports
 
 **Semantics-Guided Mixture of Experts for Multi-class Disease Classification Based on Radiology Reports**
 
