@@ -2,9 +2,6 @@
 
 **Semantics-Guided Mixture of Experts for Multi-class Disease Classification Based on Radiology Reports**
 
-This repository implements the **complete SGMoE model** for user-provided text classification data. Its semantic encoder, semantic-center prior, learned gate, class-group experts, dynamic expert loss and assignment-based gating loss are always present. There are no named-task presets, baseline selectors or ablation modes.
-
-Labels and expert count are not fixed in source code. Labels are read from your training records, and semantic preparation generates expert groups for those labels. The main model uses a LoRA-adapted Hugging Face text encoder; the semantic encoder is independently trained and then frozen. Feature dimensions are inferred from the actual encoders.
 
 ## Install
 
@@ -90,15 +87,6 @@ model = SGMoE(config, labels)
 ```
 
 `TextDataset` also accepts in-memory records for custom data adapters. No model or data registry needs to be edited to introduce another classification task.
-
-## Tests and release scope
-
-```bash
-python -m pip install -r requirements-dev.txt
-python -m pytest
-```
-
-Tests use synthetic encoders and inputs, covering complete-model mathematics, gradients, arbitrary labels, preparation, training, prediction and protected continuation. The code does not distribute data or pretrained/trained weights. This general implementation preserves the full model's components but does not claim automatic reproduction of historical manuscript numbers. Real-data GPU training and online dependency installation need validation in your environment.
 
 ## License
 
