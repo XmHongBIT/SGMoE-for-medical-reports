@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sgmoe"
+version = "0.2.0"
+description = "Full semantics-guided mixture of experts for configurable text classification"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+readme = "README.md"
+dynamic = ["dependencies"]
+
+[project.scripts]
+sgmoe-prepare = "prepare:main"
+sgmoe-train = "train:main"
+sgmoe-predict = "predict:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools]
+packages = ["sgmoe"]
+py-modules = ["prepare", "train", "predict"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
