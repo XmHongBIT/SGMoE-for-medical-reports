@@ -1,6 +1,7 @@
 # SGMoE for medical reports
 
 **Semantics-Guided Mixture of Experts for Multi-class Disease Classification Based on Radiology Reports**
+
 SGMoE specializes multiple classification experts in handling different disease types and modes, each learning class boundaries within a specific subspace of the feature distribution. Especially works on the multi-class medical reports.
 
 ## Install
