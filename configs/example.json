@@ -1,0 +1,40 @@
+{
+  "data": {
+    "train_file": "../data/train.csv",
+    "validation_file": "../data/validation.csv",
+    "test_file": "../data/test.csv",
+    "text_column": "text",
+    "label_column": "label",
+    "id_column": "id",
+    "labels": null
+  },
+  "encoder": {
+    "model_name_or_path": "../models/base_encoder",
+    "max_length": 400,
+    "global_attention": false,
+    "lora_target_modules": ["query", "value"],
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.1
+  },
+  "semantic": {
+    "artifact_dir": "../artifacts",
+    "epochs": 60,
+    "min_clusters": 2,
+    "max_clusters": 20
+  },
+  "training": {
+    "output_dir": "../outputs",
+    "epochs": 100,
+    "batch_size": 32,
+    "learning_rate": 0.00002,
+    "weight_decay": 0.01,
+    "warmup_steps": 100,
+    "dropout": 0.2,
+    "gating_loss_weight": 0.5,
+    "max_grad_norm": 1.0,
+    "early_stopping_patience": 30,
+    "num_workers": 0,
+    "seed": 42
+  }
+}
