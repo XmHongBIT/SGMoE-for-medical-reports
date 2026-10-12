@@ -95,3 +95,12 @@ model = SGMoE(config, labels)
 ## License
 
 Code is licensed under [MIT](LICENSE). Data and pretrained-model permissions remain with their respective providers. Formal manuscript citation metadata will be added when available.
+
+## Citation
+
+If you use this code, please cite:
+
+```bash
+updating
+```
+
